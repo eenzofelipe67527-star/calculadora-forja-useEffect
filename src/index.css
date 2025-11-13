@@ -10,6 +10,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  margin-bottom: 50px;
+  background-image: url('/calcs.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1{
@@ -18,4 +23,14 @@ h1{
   align-items: center;
   justify-content: center;
   gap: 50px;
+}
+
+
+input{
+  padding: 10px;
+  border: none;
+  border: 2px solid grey;
+  font-size: 18px;
+  border-radius: 999px;
+
 }

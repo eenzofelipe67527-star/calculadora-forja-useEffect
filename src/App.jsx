@@ -15,21 +15,19 @@ function App() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    if (n1 !== undefined && n2 !== undefined && !isNaN(n1) && !isNaN(n1)) {
+    if (n1 !== undefined && n2 !== undefined && !isNaN(n1) && !isNaN(n2)) {
       setRespSoma(parseFloat(n1) + parseFloat(n2))
       setRespSub(parseFloat(n1) - parseFloat(n2))
       setRespMult(parseFloat(n1) * parseFloat(n2))
       setRespDiv(parseFloat(n1) / parseFloat(n2))
-
-
-      setError('')
-    } else {
+      setError('Digite valores númericos para calcular')
+    }else{
       setError('Digite valores númericos para calcular')
     }
 
   }, [n1, n2])
   return (
-    <>
+    <div className={styles.wrapAll}>
       <h1 className={styles.title}>Calculadora</h1>
       <p>{error}</p>
       <div className={styles.wrap}>
@@ -60,7 +58,7 @@ function App() {
         <h3>{respDiv}</h3>
 
       </div>
-    </>
+    </div>
   )
 }
 
